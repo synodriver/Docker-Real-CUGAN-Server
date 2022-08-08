@@ -19,7 +19,7 @@ worker_class = os.getenv("worker_class", "hypercorn.workers.HypercornUvloopWorke
 worker_connections = int(os.getenv("worker_connections", 10000))
 
 loglever = os.getenv("loglever", "debug")
-# accesslog = "access.log"
+accesslog = "./log/access.log"
 
 access_log_format = os.getenv(
     "access_log_format", '%(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"'
